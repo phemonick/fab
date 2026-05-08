@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ink: #0a0a0a;
+    --color-cream: #f5f0e8;
+    --color-gold: #c9a84c;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-feature-settings: 'ss01', 'ss02', 'cv01';
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Hide scrollbar everywhere except where needed */
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #2c2c2c;
+    border-radius: 4px;
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #3c3c3c;
+  }
+}
+
+@layer components {
+  /* Warm-desaturate grade for atmospheric / stock imagery.
+     Project (Layer A) imagery does NOT receive this filter — see IMAGERY_STRATEGY.md §1. */
+  .image-graded {
+    filter: saturate(0.85) contrast(1.05) brightness(0.98) sepia(0.05);
+  }
+
+  .image-bw {
+    filter: grayscale(1) contrast(1.05);
+  }
+
+  /* Editorial display heading variants */
+  .display-line {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* Gradient overlay used on hero images carrying text */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(10, 10, 10, 0.15) 0%, rgba(10, 10, 10, 0) 30%, rgba(10, 10, 10, 0.65) 100%),
+      radial-gradient(ellipse at center, transparent 50%, rgba(10, 10, 10, 0.35) 100%);
+    pointer-events: none;
+  }
+
+  /* Subtle hairline divider used between sections */
+  .hairline {
+    border-color: rgba(245, 240, 232, 0.08);
+  }
+
+  /* Underline animation for nav links */
+  .nav-link {
+    position: relative;
+    transition: color 200ms ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 0;
+    background: currentColor;
+    transition: width 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link[data-active='true']::after {
+    width: 100%;
+  }
+
+  /* Magnified arrow effect for buttons */
+  .btn-arrow {
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .group:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Hide native focus ring; replace with brand */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
