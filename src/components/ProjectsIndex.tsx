@@ -29,6 +29,7 @@ const FILTERS: { id: Filter; label: string }[] = [
   { id: 'lagos-gbagada', label: 'Gbagada' },
   { id: 'lagos-ikoyi', label: 'Ikoyi' },
   { id: 'lagos-surulere', label: 'Surulere' },
+  { id: 'abuja', label: 'Abuja' },
 ];
 
 function matches(project: Project, filter: Filter): boolean {

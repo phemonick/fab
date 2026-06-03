@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { site } from '@/data/site';
 import { Container } from './Container';
 import { Logo } from './Logo';
+import { DownloadPdfButton } from './DownloadPdfButton';
 
 const COLS = [
   {
@@ -35,7 +36,7 @@ export function Footer() {
   return (
     <footer className="border-t border-cream/[0.06] bg-ink">
       <Container wide className="py-16 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Logo />
             <p className="mt-6 max-w-md text-pretty text-warmgrey-400 leading-relaxed">
@@ -81,12 +82,13 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-cream/[0.06]">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-warmgrey-600 leading-relaxed text-balance max-w-3xl">
               © {new Date().getFullYear()} {site.name}. {site.rc}. Registered with the Corporate
               Affairs Commission. Registered contractor — Lagos State Government and the Federal
               Government of Nigeria. All rights reserved.
             </p>
+            <DownloadPdfButton className="shrink-0" label="Download page as PDF" />
           </div>
         </div>
       </Container>

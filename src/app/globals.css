@@ -124,6 +124,13 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* On phones, balancing a large display heading in a narrow measure can push a
+     line past the viewport edge. Fall back to normal wrapping below md. */
+  @media (max-width: 767px) {
+    .text-balance {
+      text-wrap: pretty;
+    }
+  }
   .text-pretty {
     text-wrap: pretty;
   }

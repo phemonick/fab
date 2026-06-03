@@ -72,6 +72,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<Pa
         </div>
 
         <Container wide className="relative z-10 flex min-h-[60svh] flex-col justify-end pb-16 pt-12 lg:pb-20">
+          {project.premium && (
+            <div className="mb-5 inline-flex items-center gap-1.5 border border-gold/50 bg-ink/40 backdrop-blur px-3 py-1 text-[10px] uppercase tracking-eyebrow text-gold">
+              <span className="h-1 w-1 rounded-full bg-gold" aria-hidden />
+              Premium Residence
+            </div>
+          )}
           <Eyebrow className="mb-6">
             {project.statusLabel} · {project.location}
           </Eyebrow>
@@ -109,7 +115,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<Pa
       {(project.brief || project.build) && (
         <section className="py-24 lg:py-32">
           <Container wide>
-            <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
               {project.brief && (
                 <Reveal className="lg:col-span-6">
                   <Eyebrow className="mb-6">The Brief</Eyebrow>

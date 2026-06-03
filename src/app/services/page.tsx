@@ -66,7 +66,7 @@ export default function ServicesPage() {
       {/* CONCRETE PRODUCTION */}
       <section className="border-t border-cream/[0.06] bg-ink-800 py-24 lg:py-32">
         <Container wide>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20 items-center">
             <Reveal className="lg:col-span-5">
               <Eyebrow className="mb-6">Vertical Integration</Eyebrow>
               <h2 className="display-line text-display-md text-cream text-balance mb-6">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
       {/* MAINTENANCE */}
       <section className="border-t border-cream/[0.06] py-24 lg:py-32">
         <Container wide>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-4">
               <Reveal>
                 <Eyebrow className="mb-6">Maintenance & Renovations</Eyebrow>

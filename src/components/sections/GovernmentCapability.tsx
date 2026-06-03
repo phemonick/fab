@@ -19,7 +19,7 @@ export function GovernmentCapability() {
       </div>
 
       <Container wide className="relative z-10 py-24 lg:py-32">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <Reveal>
               <Eyebrow className="mb-6">Government & Institutional</Eyebrow>

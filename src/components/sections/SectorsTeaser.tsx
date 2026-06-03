@@ -8,7 +8,7 @@ export function SectorsTeaser() {
   return (
     <section className="border-t border-cream/[0.06] py-24 lg:py-32">
       <Container wide>
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-4">
             <Reveal>
               <Eyebrow className="mb-6">What We Do</Eyebrow>

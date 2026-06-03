@@ -8,7 +8,7 @@ export function AboutStrip() {
   return (
     <section className="relative py-24 lg:py-32" id="about">
       <Container wide>
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-4">
             <Reveal>
               <Eyebrow className="mb-8">About FAB Projects</Eyebrow>

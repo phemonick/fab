@@ -30,6 +30,14 @@
 
 - `highrise-romanello-01.jpg` — **Stefano Romanello** — https://unsplash.com/photos/DVpzROsbuws — Modern apartment block with wood-slat balconies in warm sunset light. Landscape. **⭐ Hero candidate.** Reads as luxury residential; warm tone matches grade.
 
+### Home hero slideshow (Layer B) — added for the cinematic hero rotation
+
+> Graded to the house look and served from `public/stock/hero/`. Used in the homepage hero slider, interleaved with FAB's own project photography (Layer A). Never captioned as an FAB project.
+
+- `02-villa-twilight.jpg` — Unsplash (photo-1748063578185) — Modern residence glowing warm at twilight. Landscape. Cinematic mood frame.
+- `03-pool-home.jpg` — Unsplash (photo-1613490493576) — White contemporary home with a mirror-still infinity pool. Landscape. Luxury/lifestyle frame.
+- `04-lagos-golden-hour.jpg` — Unsplash (photo-1569706971306) — Lagos at golden hour, aerial over the city. Landscape. "We are in Lagos" closer.
+
 ---
 
 ## License notice

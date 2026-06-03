@@ -36,6 +36,10 @@ export type Project = {
   images: ProjectImage[];
   /** True for the 3 featured projects shown on the homepage. */
   featured?: boolean;
+  /** Display order within the homepage "Featured Work" strip (independent of the index `order`). */
+  featuredOrder?: number;
+  /** True for premium-tier residences at marquee addresses (e.g. Parkview, Ikoyi). */
+  premium?: boolean;
   /** Display order on the projects index. */
   order: number;
 };
@@ -76,6 +80,7 @@ export const projects: Project[] = [
       { src: '/projects/victoria-court/08-perimeter.jpg', alt: 'Victoria Court perimeter and approach' },
     ],
     featured: true,
+    featuredOrder: 1,
     order: 1,
   },
 
@@ -109,7 +114,6 @@ export const projects: Project[] = [
         isRender: true,
       },
     ],
-    featured: true,
     order: 2,
   },
 
@@ -144,7 +148,147 @@ export const projects: Project[] = [
       { src: '/projects/obaro-close-millennium/05-windows.jpg', alt: 'Window pattern detail' },
     ],
     featured: true,
+    featuredOrder: 3,
     order: 3,
+  },
+
+  // ============================================
+  // PREMIUM — THE GROVE, CENTENARY CITY (Abuja) — ongoing
+  // ============================================
+  {
+    slug: 'the-grove-centenary-city',
+    name: 'The Grove, Centenary City',
+    cardName: 'The Grove, Abuja',
+    location: 'Centenary City',
+    city: 'Abuja',
+    status: 'ongoing-construction',
+    statusLabel: 'Ongoing · Premium',
+    sector: 'residential',
+    hook: 'A luxury terrace-duplex development at Centenary City, Abuja — five-bedroom homes set against the FCT hills, now rising from foundation to frame.',
+    brief:
+      'The Grove is a luxury terrace-duplex development inside Centenary City, Abuja — a master-planned address with room to breathe and a skyline of hills to answer to. The brief is unambiguous: five-bedroom duplexes specified and built to a standard that earns the location, with the scale and generosity that buyers at this address expect.',
+    build:
+      'Five-bedroom terrace duplexes, taken from the ground up. The work shown here is the substructure and frame: a cast ground-floor slab, column starter bars set out and surveyed to the millimetre, and the first columns boxed in timber formwork and poured. Engineering precision is the story at this stage — total-station set-out, disciplined reinforcement, and a column grid laid down to carry the open, light-filled duplex plans to come. Construction is active on site.',
+    facts: [
+      { label: 'Location', value: 'Centenary City, Abuja, FCT' },
+      { label: 'Sector', value: 'Residential — terrace duplexes' },
+      { label: 'Units', value: '5-bedroom terrace duplexes' },
+      { label: 'Class', value: 'Premium — Luxury' },
+      { label: 'Status', value: 'Ongoing — Under Construction' },
+    ],
+    images: [
+      { src: '/projects/the-grove-abuja/01-site-rising.jpg', alt: 'The Grove construction site at Centenary City, Abuja — cast slab and columns rising against the FCT hills' },
+      { src: '/projects/the-grove-abuja/02-columns-landscape.jpg', alt: 'Cast concrete columns rising over the Centenary City landscape' },
+      { src: '/projects/the-grove-abuja/03-survey-setout.jpg', alt: 'Surveyor setting out column positions with a total station on site' },
+      { src: '/projects/the-grove-abuja/04-formwork-detail.jpg', alt: 'Timber column formwork being fixed and braced on site' },
+      { src: '/projects/the-grove-abuja/05-columns-progress.jpg', alt: 'Cast columns and reinforcement starter bars across the ground-floor slab' },
+    ],
+    premium: true,
+    order: 4,
+  },
+
+  // ============================================
+  // PREMIUM — IKOYI II (Prince Tayo Adesanya Street)
+  // ============================================
+  {
+    slug: 'ikoyi-prince-tayo-adesanya',
+    name: 'Private Residence, Prince Tayo Adesanya Street',
+    cardName: 'Prince Tayo Adesanya, Ikoyi',
+    location: 'Prince Tayo Adesanya Street, Parkview, Ikoyi',
+    city: 'Lagos',
+    status: 'completed',
+    statusLabel: 'Completed · Premium',
+    sector: 'residential',
+    hook: 'A sculptural white three-storey residence at Parkview, Ikoyi — laser-cut timber screens, a signature terracotta gate, and a massing that holds its own on one of Lagos’s most exacting streets.',
+    brief:
+      'Parkview, Ikoyi sets a standard before a single drawing is made — the address itself is the brief. The ask here was a private residence that reads as architecture rather than inventory: confident from the street, calm inside, and detailed to a level that rewards a second and third look.',
+    build:
+      'A crisp white volume composed as stacked, shifting masses, fenestrated with deep-set apertures and wrapped in a sculptural three-storey elevation. The street face is screened by bespoke laser-cut panels — a contemporary reading of the mashrabiya — that filter light and privacy without closing the house off. A warm terracotta timber gate signs the entrance against the white render, framed by mature palms and a banded approach. Finishes are specified to the address: imported tile, precise joinery, and metalwork carried through to the smallest reveal.',
+    facts: [
+      { label: 'Location', value: 'Prince Tayo Adesanya Street, Parkview, Ikoyi, Lagos' },
+      { label: 'Sector', value: 'Residential — private residence' },
+      { label: 'Class', value: 'Premium' },
+      { label: 'Status', value: 'Completed' },
+    ],
+    images: [
+      { src: '/projects/ikoyi-2-tayo-adesanya/01-front-elevation.jpg', alt: 'White three-storey residence with terracotta gate and laser-cut screens at Parkview, Ikoyi' },
+      { src: '/projects/ikoyi-2-tayo-adesanya/02-approach.jpg', alt: 'Banded approach to the residence with palm landscaping' },
+      { src: '/projects/ikoyi-2-tayo-adesanya/03-lattice-screen-detail.jpg', alt: 'Bespoke laser-cut screen panels filtering the upper-floor elevation' },
+      { src: '/projects/ikoyi-2-tayo-adesanya/04-gate-landscaping.jpg', alt: 'Terracotta timber entrance gate framed by mature palms' },
+      { src: '/projects/ikoyi-2-tayo-adesanya/05-elevation-alt.jpg', alt: 'Three-quarter view of the residence and its sculptural massing' },
+    ],
+    premium: true,
+    featured: true,
+    featuredOrder: 2,
+    order: 5,
+  },
+
+  // ============================================
+  // PREMIUM — IKOYI I (Professor Jubril Aminu Street)
+  // ============================================
+  {
+    slug: 'ikoyi-professor-jubril-aminu',
+    name: 'Private Residences, Professor Jubril Aminu Street',
+    cardName: 'Professor Jubril Aminu, Ikoyi',
+    location: 'Professor Jubril Aminu Street, Parkview, Ikoyi',
+    city: 'Lagos',
+    status: 'completed',
+    statusLabel: 'Completed · Premium',
+    sector: 'residential',
+    hook: 'Contemporary detached homes on a quiet Parkview close — stone-textured render, timber-screened balconies, and louvred privacy gates, delivered to the Ikoyi standard.',
+    brief:
+      'A pair of contemporary residences on a tree-lined close inside Parkview, Ikoyi, for buyers who want modern architecture without noise. The brief asked for homes that feel substantial and private from the street, and generous and light-filled within — at a finish level the neighbourhood takes for granted.',
+    build:
+      'Three-storey volumes in stone-textured render, articulated with deep balconies screened by dark hardwood slats and crowned by a sheltering roof plane. White louvred gates hold privacy at the boundary while keeping the street elevation calm. The palette is deliberately restrained — warm grey, charcoal, and timber — letting proportion and detailing carry the address rather than ornament.',
+    facts: [
+      { label: 'Location', value: 'Professor Jubril Aminu Street, Parkview, Ikoyi, Lagos' },
+      { label: 'Sector', value: 'Residential — private residences' },
+      { label: 'Class', value: 'Premium' },
+      { label: 'Status', value: 'Completed' },
+    ],
+    images: [
+      { src: '/projects/ikoyi-1-jubril-aminu/01-front-elevation.jpg', alt: 'Contemporary stone-textured residence with timber-screened balcony at Parkview, Ikoyi' },
+      { src: '/projects/ikoyi-1-jubril-aminu/02-twin-homes.jpg', alt: 'Pair of detached residences behind white louvred gates' },
+      { src: '/projects/ikoyi-1-jubril-aminu/03-facade-detail.jpg', alt: 'Facade detail — hardwood-slat balcony screen and deep apertures' },
+      { src: '/projects/ikoyi-1-jubril-aminu/04-estate-context.jpg', alt: 'The residences within the Parkview estate context' },
+      { src: '/projects/ikoyi-1-jubril-aminu/05-estate-street.jpg', alt: 'Tree-lined Parkview estate street approaching the residences' },
+    ],
+    premium: true,
+    order: 6,
+  },
+
+  // ============================================
+  // PREMIUM — IKOYI III (Alade Odunewu Street) — ongoing
+  // ============================================
+  {
+    slug: 'ikoyi-alade-odunewu',
+    name: 'Maisonettes & Penthouses, Alade Odunewu Street',
+    cardName: 'Alade Odunewu, Ikoyi',
+    location: 'Alade Odunewu Street, Parkview, Ikoyi',
+    city: 'Lagos',
+    status: 'ongoing-construction',
+    statusLabel: 'Ongoing · Premium',
+    sector: 'residential',
+    hook: 'A premium Parkview development rising on site — eight spacious maisonette units crowned by two penthouse apartments, photographed mid-build at Alade Odunewu Street, Ikoyi.',
+    brief:
+      'Another Parkview, Ikoyi address, and another exacting standard to build to. The brief is a premium multi-unit residence — eight generous maisonettes and two penthouse apartments — designed for scale and light, with wide spans and generous floor-to-floor heights, and a structure engineered to carry open, contemporary plans rather than work around them.',
+    build:
+      'Ten homes in all: eight spacious maisonette units below, two stunning penthouse apartments above. The reinforced-concrete frame is up — deep beams, a disciplined column grid, and broad structural bays that read the future living spaces before a single wall is set. Timber formwork crowns the roof level; reinforcement is staged on the slabs for the floors still to come. These photographs are an honest record of the work in progress — the bones of a premium development being put up to specification, on site, today.',
+    facts: [
+      { label: 'Location', value: 'Alade Odunewu Street, Parkview, Ikoyi, Lagos' },
+      { label: 'Sector', value: 'Residential — maisonettes & penthouses' },
+      { label: 'Units', value: '8 maisonettes · 2 penthouse apartments' },
+      { label: 'Class', value: 'Premium' },
+      { label: 'Status', value: 'Ongoing — Under Construction' },
+    ],
+    images: [
+      { src: '/projects/ikoyi-3-alade-odunewu/01-structure-rising.jpg', alt: 'Reinforced-concrete structure rising on site at Alade Odunewu Street, Ikoyi' },
+      { src: '/projects/ikoyi-3-alade-odunewu/02-structural-frame.jpg', alt: 'Structural frame with column grid and staged reinforcement' },
+      { src: '/projects/ikoyi-3-alade-odunewu/03-column-rhythm.jpg', alt: 'Column rhythm across a broad structural bay under construction' },
+      { src: '/projects/ikoyi-3-alade-odunewu/04-work-in-progress.jpg', alt: 'Work in progress — formwork, reinforcement, and an open structural plan' },
+    ],
+    premium: true,
+    order: 7,
   },
 
   // ============================================
@@ -176,7 +320,7 @@ export const projects: Project[] = [
       { src: '/projects/interiors/04-kitchen.jpg', alt: 'Premium interior — kitchen' },
       { src: '/projects/interiors/05-master-bath.jpg', alt: 'Premium interior — master bathroom' },
     ],
-    order: 4,
+    order: 8,
   },
 
   // ============================================
@@ -207,32 +351,32 @@ export const projects: Project[] = [
       { src: '/projects/allen-house/02-front.jpg', alt: 'Front elevation of the duplex' },
       { src: '/projects/allen-house/04-courtyard.jpg', alt: 'Courtyard view' },
     ],
-    order: 5,
+    order: 9,
   },
   {
-    slug: 'medina-estate-gbagada',
-    name: 'Three Houses, Medina Estate',
-    cardName: 'Medina Estate',
-    location: '10 Sesan Oshilloye Street, Medina Estate, Gbagada',
+    slug: 'allen-avenue-ikeja',
+    name: 'Three Houses, Allen Avenue',
+    cardName: 'Allen Avenue, Ikeja',
+    location: 'Allen Avenue, Ikeja',
     city: 'Lagos',
     status: 'completed',
     statusLabel: 'Completed · 2022',
     sector: 'residential',
     year: '2022',
     buildPeriod: 'January 2022 — October 2022',
-    hook: 'Three fully detached four-bedroom homes inside Medina Estate, Gbagada. Delivered between January and October 2022.',
+    hook: 'Three fully detached four-bedroom homes on Allen Avenue, Ikeja. Delivered between January and October 2022.',
     facts: [
-      { label: 'Location', value: '10 Sesan Oshilloye Street, Medina Estate, Gbagada, Lagos' },
+      { label: 'Location', value: 'Allen Avenue, Ikeja, Lagos' },
       { label: 'Sector', value: 'Residential — multi-unit' },
       { label: 'Units', value: '3 fully detached · 4 bedrooms each' },
       { label: 'Status', value: 'Completed' },
       { label: 'Build period', value: 'January 2022 — October 2022' },
     ],
     images: [
-      { src: '/projects/medina-estate/01-front.jpg', alt: 'Stone-clad front elevation at 10 Sesan Oshilloye Street' },
-      { src: '/projects/medina-estate/02-elevation.jpg', alt: 'Side elevation' },
+      { src: '/projects/allen-avenue/01-front.jpg', alt: 'Stone-clad front elevation, Allen Avenue, Ikeja' },
+      { src: '/projects/allen-avenue/02-elevation.jpg', alt: 'Side elevation' },
     ],
-    order: 6,
+    order: 10,
   },
   {
     slug: 'talabi-estate-ikeja',
@@ -259,7 +403,7 @@ export const projects: Project[] = [
       { src: '/projects/talabi-estate/03-balconies.jpg', alt: 'Balcony rhythm across the terrace block' },
       { src: '/projects/talabi-estate/04-side.jpg', alt: 'Side elevation' },
     ],
-    order: 7,
+    order: 11,
   },
   {
     slug: 'wura-esan-weara-estate',
@@ -278,7 +422,7 @@ export const projects: Project[] = [
       { label: 'Status', value: 'Completed' },
     ],
     images: [],
-    order: 8,
+    order: 12,
   },
   {
     slug: 'dideolu-estate-ogba',
@@ -297,7 +441,7 @@ export const projects: Project[] = [
       { label: 'Status', value: 'Completed' },
     ],
     images: [],
-    order: 9,
+    order: 13,
   },
   {
     slug: 'beckley-avenue-millennium-estate',
@@ -316,11 +460,13 @@ export const projects: Project[] = [
       { label: 'Status', value: 'Completed' },
     ],
     images: [],
-    order: 10,
+    order: 14,
   },
 ];
 
-export const featuredProjects = projects.filter((p) => p.featured).sort((a, b) => a.order - b.order);
+export const featuredProjects = projects
+  .filter((p) => p.featured)
+  .sort((a, b) => (a.featuredOrder ?? a.order) - (b.featuredOrder ?? b.order));
 export const completedProjects = projects.filter((p) => p.status === 'completed');
 export const ongoingProjects = projects.filter((p) => p.status.startsWith('ongoing'));
 

@@ -37,6 +37,14 @@ export function ProjectCard({ project, size = 'default', className }: ProjectCar
         </div>
       )}
 
+      {/* Premium badge on top-left when applicable */}
+      {project.premium && (
+        <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 border border-gold/50 bg-ink/70 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-eyebrow text-gold">
+          <span className="h-1 w-1 rounded-full bg-gold" aria-hidden />
+          Premium
+        </div>
+      )}
+
       {/* Render badge on top-right when applicable */}
       {cover?.isRender && (
         <div className="absolute top-4 right-4 z-10 bg-ink/80 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-eyebrow text-cream">

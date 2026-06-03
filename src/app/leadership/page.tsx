@@ -27,7 +27,7 @@ export default function LeadershipPage() {
           <div className="space-y-24 lg:space-y-32">
             {executives.map((exec, i) => (
               <Reveal key={exec.slug}>
-                <article className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+                <article className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
                   <div className="lg:col-span-4">
                     <span className="font-serif text-gold/70 text-sm tabular-nums">
                       0{i + 1}

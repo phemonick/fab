@@ -27,7 +27,7 @@ export default function AboutPage() {
       {/* STORY */}
       <section className="py-24 lg:py-32">
         <Container wide>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-4">
               <Reveal>
                 <Eyebrow className="mb-6">Our Story</Eyebrow>
@@ -124,7 +124,7 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="py-24 lg:py-32 border-t border-cream/[0.06]">
         <Container wide>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-4">
               <Reveal>
                 <Eyebrow className="mb-6">What we hold</Eyebrow>
